@@ -36,7 +36,7 @@ export default class TopologyServices extends Vue {
   private services = [{key: 0, label: 'All services'}];
   private service = {key: 0, label: 'All services'};
   private fetchData() {
-    Axios.post('/graphql', {
+    Axios.post('graphql', {
       query: `
       query queryServices($duration: Duration!) {
         services: getAllServices(duration: $duration) {

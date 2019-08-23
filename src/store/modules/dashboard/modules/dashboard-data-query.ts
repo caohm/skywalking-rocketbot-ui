@@ -43,7 +43,7 @@ const getters = {
 // actions
 const actions: ActionTree<State, any> = {
   GET_QUERY(context: { commit: Commit, dispatch: Dispatch, getters: any }, variablesData: any): AxiosPromise<void> {
-    return axios.post('/graphql', {
+    return axios.post('graphql', {
       query: context.getters.Graphql,
       variables: variablesData,
     }, { cancelToken: cancelToken() }).then((res: AxiosResponse<any>) => {

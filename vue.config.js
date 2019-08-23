@@ -16,10 +16,11 @@
  */
 
 module.exports = {
+  publicPath: '/skywalking',
   devServer: {
     proxy: {
-      '/graphql': {
-        target: 'http://skywalking.daocloud.io:12800',
+      'graphql': {
+        target: 'http://172.20.27.219:12800',
         changeOrigin: true,
       },
     },
